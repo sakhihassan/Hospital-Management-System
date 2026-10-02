@@ -286,17 +286,6 @@ The project proposal defines the system architecture, intended features,
 and technologies. Implementation progress will be documented through
 regular GitHub commits and weekly updates.
 
-## 👥 Group Members
-
-**FAST-NUCES, Karachi Campus**\
-**Programming Fundamentals --- BCS-1C**
-
-  Student ID   Name
-  ------------ ------------------------
-  26K-0594     Muhammad Sakhi Hassan
-  26K-0600     Syed Abdullah Bin Amir
-  26K-0633     Varaa Nawaz
-
 ## 🔄 GitHub Weekly Updates
 
 The repository will be updated regularly to document the team's
