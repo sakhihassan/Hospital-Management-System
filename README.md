@@ -233,14 +233,14 @@ progress.
   -----------------------------------------------------------------------
   Week                    Planned Development     Status
   ----------------------- ----------------------- -----------------------
-  Week 1                  Project proposal,       ✅ Done
+  Week 1                  Project proposal,       ✅ Done         
                           planning, and GitHub    
                           repository setup        
 
-  Week 2                  Define structures and   ✅ Done
+  Week 2                  Define structures and   ✅ Done         
                           design the main menu    
 
-  Week 3                  Implement role-based    ✅ Done
+  Week 3                  Implement role-based    ✅ Done              
                           authentication          
 
   Week 4                  Develop Admin Portal    🔄 In Progress
