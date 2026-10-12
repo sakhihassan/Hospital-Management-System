@@ -233,45 +233,45 @@ progress.
   -----------------------------------------------------------------------
   Week                    Planned Development     Status
   ----------------------- ----------------------- -----------------------
-  Week 1                  Project proposal,       ✅ Done         
+  Week 1                  Project proposal,               ✅ Done         
                           planning, and GitHub    
                           repository setup        
 
-  Week 2                  Define structures and   ✅ Done         
+  Week 2                  Define structures and           ✅ Done         
                           design the main menu    
 
-  Week 3                  Implement role-based    ✅ Done              
+  Week 3                  Implement role-based            ✅ Done              
                           authentication          
 
-  Week 4                  Develop Admin Portal    🔄 In Progress
+  Week 4                  Develop Admin Portal            🔄 In Progress
 
-  Week 5                  Develop Doctor Portal   ⏳ Pending          
+  Week 5                  Develop Doctor Portal           ⏳ Pending          
 
-  Week 6                  Develop Patient Portal  ⏳ Pending         
+  Week 6                  Develop Patient Portal          ⏳ Pending         
 
-  Week 7                  Develop Staff Portal    ⏳ Pending          
+  Week 7                  Develop Staff Portal            ⏳ Pending          
 
-  Week 8                  Implement appointment   ⏳ Pending         
+  Week 8                  Implement appointment           ⏳ Pending         
                           scheduling and conflict 
                           checking                
 
-  Week 9                  Implement ward and bed  ⏳ Pending        
+  Week 9                  Implement ward and bed          ⏳ Pending        
                           management              
 
-  Week 10                 Implement billing       ⏳ Pending         
+  Week 10                 Implement billing               ⏳ Pending         
                           management              
 
-  Week 11                 Implement dynamic       ⏳ Pending          
+  Week 11                 Implement dynamic               ⏳ Pending          
                           memory allocation and   
                           searching               
 
-  Week 12                 Implement binary file   ⏳ Pending        
+  Week 12                 Implement binary file           ⏳ Pending        
                           handling                
 
-  Week 13                 Integration and         ⏳ Pending          
+  Week 13                 Integration and                 ⏳ Pending          
                           debugging               
 
-  Week 14                 Testing, documentation, ⏳ Pending       
+  Week 14                 Testing, documentation,         ⏳ Pending       
                           and final submission    
   -----------------------------------------------------------------------
 
