@@ -39,4 +39,7 @@ struct Billing
     float amount;
 };
 
+extern struct Patient patients[50];
+extern int patientCount;
+
 #endif

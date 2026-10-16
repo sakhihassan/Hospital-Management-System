@@ -35,7 +35,22 @@ void doctorPortal()
         {
             case 1:
                 printf("\n===== PATIENT LIST =====\n");
-                printf("Patient records will be connected during integration.\n");
+
+                if(patientCount == 0)
+                {
+                    printf("No patients registered yet.\n");
+                }
+                else
+                {
+                    for(i = 0; i < patientCount; i++)
+                    {
+                        printf("\nPatient ID: %d\n", patients[i].id);
+                        printf("Name: %s\n", patients[i].name);
+                        printf("Age: %d\n", patients[i].age);
+                        printf("Assigned Doctor ID: %d\n",
+                               patients[i].doctorId);
+                    }
+                }
                 break;
 
             case 2:
@@ -54,13 +69,16 @@ void doctorPortal()
                     printf("\n===== WRITE PRESCRIPTION =====\n");
 
                     printf("Enter Patient ID: ");
-                    scanf("%d", &prescriptions[prescriptionCount].patientId);
+                    scanf("%d",
+                          &prescriptions[prescriptionCount].patientId);
 
                     printf("Enter Medicine Name: ");
-                    scanf("%49s", prescriptions[prescriptionCount].medicine);
+                    scanf("%49s",
+                          prescriptions[prescriptionCount].medicine);
 
                     printf("Enter Instructions (one word): ");
-                    scanf("%99s", prescriptions[prescriptionCount].instructions);
+                    scanf("%99s",
+                          prescriptions[prescriptionCount].instructions);
 
                     prescriptionCount++;
 

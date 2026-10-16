@@ -3,18 +3,19 @@
 #include "admin.h"
 #include "hospital.h"
 
+struct Patient patients[50];
+int patientCount = 0;
+
 void adminPortal()
 {
     int choice;
     int subChoice;
     int doctorCount = 0;
     int staffCount = 0;
-    int patientCount = 0;
     int i;
 
     struct Doctor doctors[50];
     struct Staff staff[50];
-    struct Patient patients[50];
 
     do
     {
