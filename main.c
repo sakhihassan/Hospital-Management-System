@@ -9,30 +9,37 @@
 int main()
 {
     int role;
+    int choice;
 
-    role = loginUser();
-
-    switch (role)
+    do
     {
-        case 1:
-            adminPortal();
-            break;
+        role = loginUser();
 
-        case 2:
-            doctorPortal();
-            break;
+        switch(role)
+        {
+            case 1:
+                adminPortal();
+                break;
 
-        case 3:
-            patientPortal();
-            break;
+            case 2:
+                doctorPortal();
+                break;
 
-        case 4:
-            staffPortal();
-            break;
+            case 3:
+                patientPortal();
+                break;
 
-        default:
-            printf("\nAccess Denied\n");
-    }
+            case 4:
+                staffPortal();
+                break;
+        }
+
+        printf("\n1. Login Again\n");
+        printf("0. Exit Program\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+    } while(choice != 0);
 
     return 0;
 }

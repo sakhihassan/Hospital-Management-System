@@ -1,9 +1,22 @@
+
 #include <stdio.h>
 #include "doctor.h"
+#include "hospital.h"
+
+struct Prescription
+{
+    int patientId;
+    char medicine[50];
+    char instructions[100];
+};
 
 void doctorPortal()
 {
     int choice;
+    int prescriptionCount = 0;
+    int i;
+
+    struct Prescription prescriptions[50];
 
     do
     {
@@ -12,7 +25,8 @@ void doctorPortal()
         printf("2. View Appointments\n");
         printf("3. View Medical Records\n");
         printf("4. Write Prescription\n");
-        printf("5. Logout\n");
+        printf("5. View Prescriptions\n");
+        printf("6. Logout\n");
 
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -20,22 +34,66 @@ void doctorPortal()
         switch(choice)
         {
             case 1:
-                printf("Patient List\n");
+                printf("\n===== PATIENT LIST =====\n");
+                printf("Patient records will be connected during integration.\n");
                 break;
 
             case 2:
-                printf("Appointments\n");
+                printf("\n===== APPOINTMENTS =====\n");
+                printf("Appointment management is not implemented yet.\n");
                 break;
 
             case 3:
-                printf("Medical Records\n");
+                printf("\n===== MEDICAL RECORDS =====\n");
+                printf("Medical record management is not implemented yet.\n");
                 break;
 
             case 4:
-                printf("Prescription\n");
+                if(prescriptionCount < 50)
+                {
+                    printf("\n===== WRITE PRESCRIPTION =====\n");
+
+                    printf("Enter Patient ID: ");
+                    scanf("%d", &prescriptions[prescriptionCount].patientId);
+
+                    printf("Enter Medicine Name: ");
+                    scanf("%49s", prescriptions[prescriptionCount].medicine);
+
+                    printf("Enter Instructions (one word): ");
+                    scanf("%99s", prescriptions[prescriptionCount].instructions);
+
+                    prescriptionCount++;
+
+                    printf("Prescription added successfully!\n");
+                }
+                else
+                {
+                    printf("Prescription limit reached!\n");
+                }
                 break;
 
             case 5:
+                printf("\n===== PRESCRIPTION LIST =====\n");
+
+                if(prescriptionCount == 0)
+                {
+                    printf("No prescriptions available.\n");
+                }
+                else
+                {
+                    for(i = 0; i < prescriptionCount; i++)
+                    {
+                        printf("\nPatient ID: %d\n",
+                               prescriptions[i].patientId);
+                        printf("Medicine: %s\n",
+                               prescriptions[i].medicine);
+                        printf("Instructions: %s\n",
+                               prescriptions[i].instructions);
+                    }
+                }
+                break;
+
+            case 6:
                 printf("Logging out...\n");
                 break;
 
@@ -43,5 +101,5 @@ void doctorPortal()
                 printf("Invalid choice!\n");
         }
 
-    } while(choice != 5);
+    } while(choice != 6);
 }
