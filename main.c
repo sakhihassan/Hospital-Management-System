@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include "authentication.h"
 #include "admin.h"
@@ -14,19 +15,19 @@ int main()
     switch (role)
     {
         case 1:
-            printf("\nWelcome to Admin Portal\n");
+            adminPortal();
             break;
 
         case 2:
-            printf("\nWelcome to Doctor Portal\n");
+            doctorPortal();
             break;
 
         case 3:
-            printf("\nWelcome to Patient Portal\n");
+            patientPortal();
             break;
 
         case 4:
-            printf("\nWelcome to Staff Portal\n");
+            staffPortal();
             break;
 
         default:
