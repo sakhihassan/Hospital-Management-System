@@ -1,5 +1,6 @@
 
 #include <stdio.h>
+#include <string.h>
 #include "admin.h"
 #include "hospital.h"
 
@@ -121,6 +122,9 @@ void adminPortal()
                                 printf("Enter Assigned Doctor ID: ");
                                 scanf("%d", &patients[patientCount].doctorId);
 
+                                strcpy(patients[patientCount].diagnosis,
+                                       "Not added");
+
                                 patientCount++;
 
                                 printf("Patient added successfully!\n");
@@ -146,6 +150,8 @@ void adminPortal()
                                     printf("Age: %d\n", patients[i].age);
                                     printf("Assigned Doctor ID: %d\n",
                                            patients[i].doctorId);
+                                    printf("Diagnosis: %s\n",
+                                           patients[i].diagnosis);
                                 }
                             }
                             break;

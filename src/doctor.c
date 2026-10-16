@@ -1,5 +1,6 @@
 
 #include <stdio.h>
+#include <string.h>
 #include "doctor.h"
 #include "hospital.h"
 
@@ -15,6 +16,8 @@ void doctorPortal()
     int choice;
     int prescriptionCount = 0;
     int i;
+    int patientId;
+    int found;
 
     struct Prescription prescriptions[50];
 
@@ -26,7 +29,8 @@ void doctorPortal()
         printf("3. View Medical Records\n");
         printf("4. Write Prescription\n");
         printf("5. View Prescriptions\n");
-        printf("6. Logout\n");
+        printf("6. Update Patient Diagnosis\n");
+        printf("7. Logout\n");
 
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -49,6 +53,8 @@ void doctorPortal()
                         printf("Age: %d\n", patients[i].age);
                         printf("Assigned Doctor ID: %d\n",
                                patients[i].doctorId);
+                        printf("Diagnosis: %s\n",
+                               patients[i].diagnosis);
                     }
                 }
                 break;
@@ -60,7 +66,21 @@ void doctorPortal()
 
             case 3:
                 printf("\n===== MEDICAL RECORDS =====\n");
-                printf("Medical record management is not implemented yet.\n");
+
+                if(patientCount == 0)
+                {
+                    printf("No patient records available.\n");
+                }
+                else
+                {
+                    for(i = 0; i < patientCount; i++)
+                    {
+                        printf("\nPatient ID: %d\n", patients[i].id);
+                        printf("Name: %s\n", patients[i].name);
+                        printf("Diagnosis: %s\n",
+                               patients[i].diagnosis);
+                    }
+                }
                 break;
 
             case 4:
@@ -69,12 +89,10 @@ void doctorPortal()
                     printf("\n===== WRITE PRESCRIPTION =====\n");
 
                     printf("Enter Patient ID: ");
-                    scanf("%d",
-                          &prescriptions[prescriptionCount].patientId);
+                    scanf("%d", &prescriptions[prescriptionCount].patientId);
 
                     printf("Enter Medicine Name: ");
-                    scanf("%49s",
-                          prescriptions[prescriptionCount].medicine);
+                    scanf("%49s", prescriptions[prescriptionCount].medicine);
 
                     printf("Enter Instructions (one word): ");
                     scanf("%99s",
@@ -112,6 +130,37 @@ void doctorPortal()
                 break;
 
             case 6:
+                printf("\n===== UPDATE PATIENT DIAGNOSIS =====\n");
+
+                printf("Enter Patient ID: ");
+                scanf("%d", &patientId);
+
+                found = 0;
+
+                for(i = 0; i < patientCount; i++)
+                {
+                    if(patients[i].id == patientId)
+                    {
+                        printf("Patient Name: %s\n", patients[i].name);
+                        printf("Current Diagnosis: %s\n",
+                               patients[i].diagnosis);
+
+                        printf("Enter New Diagnosis (one word): ");
+                        scanf("%99s", patients[i].diagnosis);
+
+                        printf("Diagnosis updated successfully!\n");
+                        found = 1;
+                        break;
+                    }
+                }
+
+                if(found == 0)
+                {
+                    printf("Patient ID not found!\n");
+                }
+                break;
+
+            case 7:
                 printf("Logging out...\n");
                 break;
 
@@ -119,5 +168,5 @@ void doctorPortal()
                 printf("Invalid choice!\n");
         }
 
-    } while(choice != 6);
+    } while(choice != 7);
 }

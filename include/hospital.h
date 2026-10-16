@@ -2,13 +2,16 @@
 #ifndef HOSPITAL_H
 #define HOSPITAL_H
 
+
 struct Patient
 {
     int id;
     char name[50];
     int age;
     int doctorId;
+    char diagnosis[100];
 };
+
 
 struct Doctor
 {
