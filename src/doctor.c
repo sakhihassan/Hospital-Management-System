@@ -1,6 +1,5 @@
 
 #include <stdio.h>
-#include <string.h>
 #include "doctor.h"
 #include "hospital.h"
 
@@ -77,6 +76,7 @@ void doctorPortal()
                     {
                         printf("\nPatient ID: %d\n", patients[i].id);
                         printf("Name: %s\n", patients[i].name);
+                        printf("Age: %d\n", patients[i].age);
                         printf("Diagnosis: %s\n",
                                patients[i].diagnosis);
                     }
@@ -89,10 +89,12 @@ void doctorPortal()
                     printf("\n===== WRITE PRESCRIPTION =====\n");
 
                     printf("Enter Patient ID: ");
-                    scanf("%d", &prescriptions[prescriptionCount].patientId);
+                    scanf("%d",
+                          &prescriptions[prescriptionCount].patientId);
 
                     printf("Enter Medicine Name: ");
-                    scanf("%49s", prescriptions[prescriptionCount].medicine);
+                    scanf("%49s",
+                          prescriptions[prescriptionCount].medicine);
 
                     printf("Enter Instructions (one word): ");
                     scanf("%99s",
